@@ -6,27 +6,39 @@
 //
 
 import XCTest
+@testable import propertyWrapperCollection
 
 class CopyOnWriteTests: XCTestCase {
 
+    class Texture:NSObject,NSCopying {
+        func copy(with zone: NSZone? = nil) -> Any {
+            let copy = Texture()
+            return copy
+        }
+    }
+    
+    @CopyOnWrite var texture: Texture = .init()
+    
+    let textureInstance = Texture()
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        _texture = CopyOnWrite(wrappedValue: textureInstance)
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testDefaultCopyOnWrite() throws {
+        XCTAssert(texture !== textureInstance)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testGet() {
+        let textureInstance2 = Texture()
+        texture = textureInstance2
+        XCTAssert(texture !== textureInstance)
     }
+    
+    
 
 }

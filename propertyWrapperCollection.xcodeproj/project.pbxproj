@@ -26,6 +26,8 @@
 		344C40FC26D5E6EA008EF24B /* DecodableDefaultValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C40FB26D5E6EA008EF24B /* DecodableDefaultValue.swift */; };
 		344C410426D5E7AB008EF24B /* CopyOnWriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C410326D5E7AB008EF24B /* CopyOnWriteTests.swift */; };
 		344C410C26D5E98D008EF24B /* ClampingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C410B26D5E98D008EF24B /* ClampingTests.swift */; };
+		344C423126E9FCDE008EF24B /* DynamicColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C423026E9FCDE008EF24B /* DynamicColorTests.swift */; };
+		344C423326EA1574008EF24B /* LateInitializedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C423226EA1574008EF24B /* LateInitializedTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		344C410326D5E7AB008EF24B /* CopyOnWriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyOnWriteTests.swift; sourceTree = "<group>"; };
 		344C410526D5E7AB008EF24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		344C410B26D5E98D008EF24B /* ClampingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClampingTests.swift; sourceTree = "<group>"; };
+		344C423026E9FCDE008EF24B /* DynamicColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicColorTests.swift; sourceTree = "<group>"; };
+		344C423226EA1574008EF24B /* LateInitializedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LateInitializedTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 				344C410B26D5E98D008EF24B /* ClampingTests.swift */,
 				344C410326D5E7AB008EF24B /* CopyOnWriteTests.swift */,
 				344C410526D5E7AB008EF24B /* Info.plist */,
+				344C423026E9FCDE008EF24B /* DynamicColorTests.swift */,
+				344C423226EA1574008EF24B /* LateInitializedTests.swift */,
 			);
 			path = propertyWrapperCollectionTests;
 			sourceTree = "<group>";
@@ -264,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				344C423326EA1574008EF24B /* LateInitializedTests.swift in Sources */,
 				344C410C26D5E98D008EF24B /* ClampingTests.swift in Sources */,
 				344C410426D5E7AB008EF24B /* CopyOnWriteTests.swift in Sources */,
+				344C423126E9FCDE008EF24B /* DynamicColorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +430,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = propertyWrapperCollection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,6 +449,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = propertyWrapperCollection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

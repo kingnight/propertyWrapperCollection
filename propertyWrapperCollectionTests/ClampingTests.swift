@@ -13,22 +13,34 @@ class ClampingTests: XCTestCase {
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        pH = 7
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetEqual() throws {
+        XCTAssertEqual(pH, 7)
+    }
+    
+    func testValueOutRangeGetMax() {
+        pH = 28
+        XCTAssertEqual(pH, 14)
+    }
+    
+    func testValueOutRangeGetMin() {
+        pH = 0
+        XCTAssertEqual(pH, 1)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testInitMaxMin()  {
+       _pH = Clamping(wrappedValue: 10, min: 1, max: 14)
+        XCTAssertEqual(pH, 10)
     }
 
+    func testInitRange() {
+        _pH = Clamping(wrappedValue: 8, 1...14)
+    }
+    
 }
