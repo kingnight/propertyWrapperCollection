@@ -140,8 +140,8 @@
 				344C40AE26D4F730008EF24B /* Rounded.swift */,
 				344C40B426D4F92E008EF24B /* Trimmed.swift */,
 				344C40B026D4F898008EF24B /* UnitInterval.swift */,
-				344C40BB26D4FA61008EF24B /* UserDefault.swift */,
 				344C40FB26D5E6EA008EF24B /* DecodableDefaultValue.swift */,
+				344C40BB26D4FA61008EF24B /* UserDefault.swift */,
 			);
 			path = collections;
 			sourceTree = "<group>";
