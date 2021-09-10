@@ -10,13 +10,14 @@ import Foundation
 @propertyWrapper
 struct Logged<Value> {
     init(wrappedValue: Value) {
-        print(wrappedValue)
         self.wrappedValue = wrappedValue
     }
 
     var wrappedValue: Value {
         didSet {
-            print(wrappedValue)
+            #if DEBUG
+                print(wrappedValue)
+            #endif
         }
     }
 }
